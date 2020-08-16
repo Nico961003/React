@@ -32,10 +32,10 @@ class Header extends React.Component {
                         <a href="formulario.html">Formulario</a>
                     </li>
                     <li>
-                        <a href="#">Pagina 1 </a>
+                        <a href="formulario.html">Pagina 1 </a>
                     </li>
                     <li>
-                        <a href="#">Pagina 2</a>
+                        <a href="formulario.html">Pagina 2</a>
                     </li>
                 </ul>
 

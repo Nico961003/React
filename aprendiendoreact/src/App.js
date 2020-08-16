@@ -7,22 +7,18 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import SeccionPruebas from './components/SeccionPruebas';
 
-function hola($nombre, $edad) {
-    return (
-        <div>
-            <h1>Hola {$nombre} </h1>
-            <h2>tienes {$edad}</h2>
-        </div>
-    );
-}
-
-
 function App() {
-
+var ButtonString ="Ir al Blog";
     return (
         <div className="App">
             <Header />
-            <Slider />
+            {/* uso de props o propiedades en react
+            Este es el componente padre y el hijo de ejemplo es Slider.js
+            */}
+            <Slider 
+            title="Bienvenido al curso de React con Genaro Rodriguez"
+            btn={ButtonString}
+            />
             <div className="center">
                 <section id="content">
                    <SeccionPruebas/>

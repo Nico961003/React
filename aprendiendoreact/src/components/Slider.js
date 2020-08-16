@@ -3,10 +3,11 @@ import React from 'react';
 class Slider extends React.Component {
     render() {
         return (
-            <div id="slider" className="slider-big">
-                <h1>Bienvenido al curso de React con Genaro Rodriguez</h1>
 
-                <a href="blog.html" class="btn-white"> Ir al Blog</a>
+            <div id="slider" className="slider-big">
+                <h1>{this.props.title}</h1>
+                {/* componente hijo de los props */}
+                <a href="blog.html" class="btn-white">{this.props.btn}</a>
             </div>
         )
     }
