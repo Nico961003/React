@@ -1,6 +1,5 @@
 import React from 'react';
 import MiComponente from "./MiComponente";
-import Peliculas from "./Peliculas";
 
 class SeccionPruebas extends React.Component {
     contador = 0;
@@ -52,7 +51,7 @@ class SeccionPruebas extends React.Component {
                 <h2 className="subheader"> Componentes</h2>
                 <section className="componentes">
                     <MiComponente></MiComponente>
-                    <Peliculas />
+                    
                 </section>
                 <h2 className="subheader"> Estado</h2>
                 <p>

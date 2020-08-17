@@ -5,23 +5,24 @@ import Header from './components/Header';
 import Slider from './components/Slider';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-import SeccionPruebas from './components/SeccionPruebas';
+//import SeccionPruebas from './components/SeccionPruebas';
+import Peliculas from './components/Peliculas';
 
 function App() {
-var ButtonString ="Ir al Blog";
+    var ButtonString = "Ir al Blog";
     return (
         <div className="App">
             <Header />
             {/* uso de props o propiedades en react
             Este es el componente padre y el hijo de ejemplo es Slider.js
             */}
-            <Slider 
-            title="Bienvenido al curso de React con Genaro Rodriguez"
-            btn={ButtonString}
+            <Slider
+                title="Bienvenido al curso de React con Genaro Rodriguez"
+                btn={ButtonString}
             />
             <div className="center">
                 <section id="content">
-                   <SeccionPruebas/>
+                    <Peliculas />
                 </section>
                 <Sidebar />
             </div>
