@@ -7,7 +7,7 @@ class Slider extends React.Component {
             <div id="slider" className="slider-big">
                 <h1>{this.props.title}</h1>
                 {/* componente hijo de los props */}
-                <a href="blog.html" class="btn-white">{this.props.btn}</a>
+                <a href="blog.html" className="btn-white">{this.props.btn}</a>
             </div>
         )
     }

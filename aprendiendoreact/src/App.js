@@ -28,7 +28,7 @@ function App() {
             </div>
             <div className="clearfix"></div>
             <Footer />
-        </div >
+        </div>
     );
 }
 

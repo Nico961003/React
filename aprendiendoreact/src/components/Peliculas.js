@@ -1,4 +1,5 @@
 import React from "react";
+import Pelicula from './Pelicula';
 
 class Peliculas extends React.Component {
 
@@ -9,34 +10,55 @@ class Peliculas extends React.Component {
             { titulo: "Gran torino", image: "https://www.marquid.com/wp-content/uploads/2015/05/gran-torino.jpg" },
             { titulo: "Forest Gump", image: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/09/23/15692551837212.jpg" },
         ],
-        nombre: "Genaro Rdz N"
+        nombre: "Genaro Rdz N",
+        favorita: {}
     };
+    // actualizar un elemento en concreto
+    cambiarTitulo = () => {
+        // generando valor random del 0 al 3
+        // var random = Math.floor (Math.random() * 3);
+
+        var { peliculas } = this.state;
+        // peliculas[random].titulo = "cambiando nombre";
+        peliculas[0].titulo = "cambiando nombre";
+        this.setState({
+            peliculas : peliculas
+        })
+    }
+    // heredando a clase hijo se debe de declarar en el map
+    favorita = (pelicula, indice) =>{
+        console.log("favorita marcada : ")
+        console.log(pelicula, indice);
+        this.setState({
+            favorita: pelicula
+        });
+    }
+
 
     render() {
+        var pStyle ={
+            background: 'green',
+            color: 'white',
+            padding:'10px'
+        };
+
         return (
             <div id="content" className="Peliculas">
                 <h2 className="subheader">Peliculas</h2>
                 <p>Seccion de las peliculas favoritas de {this.state.nombre}</p>
-
+                {/*} boton con evento de cambio de titulo*/}
+                <p><button onClick={this.cambiarTitulo}>Cambiar titulo de Batman</button></p>
+                {/* CONDICION QUE SE MUESTRE SI UNA PELICULA FUE SELECCIONADA COMO FAVORITA */
+                this.state.favorita.titulo && 
+                <p className="favortia" style={pStyle}><strong>La pelicula favorita es : </strong> <span>{this.state.favorita.titulo} </span></p>
+                }
+                
                 {/* crear componente peliculas */
 
                     this.state.peliculas.map((pelicula, i) => {
                         return (
                             <div id="articles">
-                                <article className="article-item" id="article-template">
-
-                                    <div className="image-wrap">
-                                        <img src={pelicula.image} alt={pelicula.titulo} />
-                                    </div>
-
-                                    <h2>{pelicula.titulo}</h2>
-                                    <span className="date">
-                                        Hace 5 minutos
-                                    </span>
-
-                                    <a href="blog.html">Leer mas</a>
-                                    <div className="clearfix"></div>
-                                </article>
+                                <Pelicula key={i} pelicula={pelicula} indice={i} marcarFavorita={this.favorita}/>
                             </div>
                         )
                     })
