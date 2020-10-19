@@ -43,6 +43,12 @@ class MiComponente extends React.Component {
                     </ol>
                 </h2>
                 <h3>{receta.calorias + ' calorias'} </h3>
+                {this.props.saludo &&
+                    <React.Fragment>
+                        <h1> Desde una prop : </h1>
+                        <h3>{this.props.saludo}</h3>
+                    </React.Fragment>
+                }
             </div>
         );
     }

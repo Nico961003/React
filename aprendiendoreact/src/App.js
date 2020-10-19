@@ -5,8 +5,9 @@ import Header from './components/Header';
 import Slider from './components/Slider';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-//import SeccionPruebas from './components/SeccionPruebas';
-import Peliculas from './components/Peliculas';
+// import SeccionPruebas from './components/SeccionPruebas';
+// import Peliculas from './components/Peliculas';
+import Router from './Router';
 
 function App() {
     var ButtonString = "Ir al Blog";
@@ -22,7 +23,10 @@ function App() {
             />
             <div className="center">
                 <section id="content">
-                    <Peliculas />
+
+                     {/* <Peliculas /> */}
+                    <Router/>
+
                 </section>
                 <Sidebar />
             </div>
